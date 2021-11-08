@@ -127,7 +127,7 @@ uint8_t *spidev_query(int fd, uint8_t cmd, uint8_t arg1, uint8_t arg2){
 		.rx_buf = (unsigned long)rx,
 		.len = iobuf_len,
 		.delay_usecs = INTERBYTE_DELAY_USEC, //задержка с переключением CS после окончания запроса
-		.word_delay_usecs = INTERBYTE_DELAY_USEC, //задержка между передачей слов(8 бит за раз, потом ждем, чтобы микроконтроллер успел это принять)
+		// .word_delay_usecs = INTERBYTE_DELAY_USEC, //задержка между передачей слов(8 бит за раз, потом ждем, чтобы микроконтроллер успел это принять)
 		.speed_hz = speed,
 		.bits_per_word = bits,
 	};
@@ -198,7 +198,7 @@ uint8_t *spidev_raw_query(int fd, uint8_t *tx_raw_data, size_t len){
 		.rx_buf = (unsigned long)rx_ansv,
 		.len = len,
 		.delay_usecs = INTERBYTE_DELAY_USEC, //задержка с переключением CS после окончания запроса
-		.word_delay_usecs = INTERBYTE_DELAY_USEC, //задержка между передачей слов(8 бит за раз, потом ждем, чтобы микроконтроллер успел это принять)
+		// .word_delay_usecs = INTERBYTE_DELAY_USEC, //задержка между передачей слов(8 бит за раз, потом ждем, чтобы микроконтроллер успел это принять)
 		.speed_hz = speed,
 		.bits_per_word = bits,
 	};
