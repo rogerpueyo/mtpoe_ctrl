@@ -86,10 +86,10 @@ static void spidev_init(int fd){
 	/* max speed hz */
 	ret = ioctl(fd, SPI_IOC_WR_MAX_SPEED_HZ, &speed);
 	if(ret == -1)
-		pabort("can't set max speed hz");
+		fprintf(stderr, "can't set max speed hz");
 	ret = ioctl(fd, SPI_IOC_RD_MAX_SPEED_HZ, &speed);
 	if(ret == -1)
-		pabort("can't get max speed hz");
+		fprintf(stderr, "can't get max speed hz");
 	if(verbose){
 		fprintf(stderr, "spi mode: %d\n", mode);
 		fprintf(stderr, "bits per word: %d\n", bits);
