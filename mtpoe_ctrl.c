@@ -434,7 +434,7 @@ struct poe_board poe_boards[ ] = {
 		.name = "mikrotik,routerboard-750up-r2",
 		.ver = 2
 	}, { /* RouterBOARD 960PGS */
-		.name = "mikrotik,routerboard-960pgs",
+		.name = "rb-960pgs",
 		.ver = 3
 	}
 };//----------------------------------------------------------------------------------
