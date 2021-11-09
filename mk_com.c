@@ -53,7 +53,7 @@ static unsigned char dallas_crc8(const unsigned char *data, const unsigned int s
 	return crc;
 }//-----------------------------------------------------------------------------------
 
-#define INTERBYTE_DELAY_USEC 250000 /* interbyte spacing between the individual bytes in microseconds */
+#define INTERBYTE_DELAY_USEC 1000000 /* interbyte spacing between the individual bytes in microseconds */
 
 static uint32_t mode = SPI_MODE_0; //режим работы spi шины(их всего 4-ре)
 static uint8_t bits = 8; //8 bits per word
